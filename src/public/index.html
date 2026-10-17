@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSPA | Вхід</title>
+    <style>
+        body {
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
+        .login-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+        }
+
+        .wspa-logo-img {
+            max-width: 180px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+            font-size: 13px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #e31e24;
+        }
+
+        button {
+            width: 100%;
+            padding: 11px;
+            background-color: #e31e24;
+            border: none;
+            color: white;
+            font-size: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        button:hover {
+            background-color: #b81419;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <!-- Логотип -->
+        <img class="wspa-logo-img" src="logo_wspa.jpg" alt="WSPA Logo">
+
+        <h2>Система консультацій</h2>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Пошта</label>
+                <input type="email" id="email" required placeholder="student@wspa.pl">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" required placeholder="••••••••">
+            </div>
+
+            <button type="submit">Увійти</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+
+            // Просте логування в консоль (F12)
+            console.log(`[LOGIN]: Спроба входу для ${email}`);
+
+            if (email.endsWith('@wspa.pl')) {
+                alert('Успішний вхід!');
+            } else {
+                alert('Використовуйте пошту @wspa.pl');
+            }
+        });
+    </script>
+
+</body>
+</html>
