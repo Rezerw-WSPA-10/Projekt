@@ -312,78 +312,14 @@ Ręczna komunikacja mailowa, brak centralnego harmonogramu i trudności w odwoł
 2. Ocenianie studentów po konsultacji.
 3. Import planu zajęć z USOS API.
 
----
 
-## Etap 5 — określcie główne funkcje
 
-### 3 funkcje najważniejsze
 
-1. Tworzenie harmonogramu konsultacji przez wykładowcę.
-2. Rezerwacja slotu czasowego przez studenta z podaniem celu.
-3. Wysyłanie automatycznych powiadomień mailowych o zmianie lub odwołaniu rezerwacji.
 
-### Funkcje dodatkowe
 
-Anulowanie wizyty z podaniem przyczyny, wyszukiwarka po nazwisku/przedmiocie, blokowanie slotu po wyczerpaniu limitu.
 
----
 
-## Etap 6 — podzielcie odpowiedzialność
 
-Formularz ról został wypełniony w sekcji C.
-
----
-
-## Etap 7 — przygotujcie prezentację
-
-# 2 minuty (5 pytań)
-
-1. **Jaki jest temat?** System obsługi konsultacji wykładowców (Rezerw+WSPA).
-2. **Jaki problem rozwiązujecie?** Chaos w umawianiu konsultacji przez e-mail i brak przejrzystego harmonogramu.
-3. **Kto będzie użytkownikiem?** Studenci, Wykładowcy, Administratorzy.
-4. **Jakie są trzy najważniejsze funkcje?** Definiowanie terminów, rezerwacja slotów przez studentów, powiadomienia e-mail.
-5. **Czego system nie będzie realizował?** Wbudowanych wideokonferencji, wystawiania ocen, integracji z USOS.
-
----
-
-# E. Kryteria akceptacji zadania
-
-Zadanie jest wykonane, jeżeli:
-
-- [x] zespół posiada temat,
-- [x] problem został opisany,
-- [x] określono cel,
-- [x] wskazano użytkowników,
-- [x] wskazano interesariuszy,
-- [x] określono zakres IN,
-- [x] określono zakres OUT,
-- [x] określono główne funkcje,
-- [x] członkowie zespołu mają role,
-- [x] karta projektu 0.1 została utworzona.
-
----
-
-# F. Autokontrola zespołu
-
-| Pytanie | TAK/NIE |
-|---|---|
-| Czy rozwiązujemy konkretny problem? | TAK |
-| Czy potrafimy wskazać użytkowników? | TAK |
-| Czy mamy więcej niż jedną rolę użytkownika? | TAK |
-| Czy system zawiera rzeczywisty proces? | TAK |
-| Czy system będzie przechowywał dane? | TAK |
-| Czy występują reguły biznesowe? | TAK |
-| Czy zakres jest możliwy do wykonania? | TAK |
-| Czy wiemy, czego świadomie nie wykonujemy? | TAK |
-| Czy projekt jest czymś więcej niż prostym CRUD-em? | TAK |
-
----
-
-# G. Praca po pierwszych zajęciach
-
-## Studenci stacjonarni
-
-Do następnego spotkania przygotować:
 
 1. kartę projektu 0.2,
 2. dopracowany zakres IN/OUT,
