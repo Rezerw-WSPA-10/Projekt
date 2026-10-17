@@ -22,7 +22,7 @@ Rezerw+WSPA
 | Imię i nazwisko     | Rola główna                     | Kontakt / login repozytorium |
 | ------------------- | ------------------------------- | ---------------------------- |
 | Vladyslav Liudvichuk| Programista Backend / Bazy Danych|                              |
-| Vitalii Panko       | Programista Frontend / UI/UX    |                              |
+| Vitalii Panko       | Programista Frontend / UI/UX    |   @Vitalii1012P                           |
 |                     |                                 |                              |
 
 ---
