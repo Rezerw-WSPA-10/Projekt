@@ -8,7 +8,7 @@ Zespół
 | Osoba | Główna odpowiedzialność | Login |
 |---|---|---|
 | Vladyslav Liudvichuk | koordynacja projektu, architektura, baza danych | @Winiffo |
-| Vitalii Panko | analiza wymagań, procesy, UI/UX, dokumentacja | @login-kolegi |
+| Vitalii Panko | analiza wymagań, procesy, UI/UX, dokumentacja | @Vitalii1012P |
 
 Dokumentacja
 [Karta projektu](docs/01-karta-projektu.md)
