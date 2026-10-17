@@ -7,7 +7,7 @@ korespondencję mailową jednolitą platformą internetową.
 Zespół
 | Osoba | Główna odpowiedzialność | Login |
 |---|---|---|
-| Vladyslav Liudvichuk | koordynacja projektu, architektura, baza danych | @twój-login |
+| Vladyslav Liudvichuk | koordynacja projektu, architektura, baza danych | @Winiffo |
 | Vitalii Panko | analiza wymagań, procesy, UI/UX, dokumentacja | @login-kolegi |
 
 Dokumentacja
