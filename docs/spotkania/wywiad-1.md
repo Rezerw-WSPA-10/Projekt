@@ -74,10 +74,10 @@ Nie zauważono wyraźnych sprzeczności. Do wyjaśnienia: klient mówi, że „b
 
 ## Otwarte pytania → Issues
 
-- **Q-01:** Czy cel wizyty jest obowiązkowy? (Issue: #?)
-- **Q-02:** Czy jest limit miejsc na jednym terminie i kto go ustala? (Issue: #?)
-- **Q-03:** Co dzieje się z zapisami, gdy wykładowca odwoła konsultacje lub zmieni salę? (Issue: #?)
-- **Q-04:** Czy zapis na konsultacje w sprawie pracy dyplomowej wymaga zatwierdzenia? (Issue: #?)
+- **Q-01:** Czy cel wizyty jest obowiązkowy? (Issue: #1)
+- **Q-02:** Czy jest limit miejsc na jednym terminie i kto go ustala? (Issue: #2)
+- **Q-03:** Co dzieje się z zapisami, gdy wykładowca odwoła konsultacje lub zmieni salę? (Issue: #3)
+- **Q-04:** Czy zapis na konsultacje w sprawie pracy dyplomowej wymaga zatwierdzenia? (Issue: #4)
 
 ## Wnioski zespołu
 
