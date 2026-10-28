@@ -13,3 +13,7 @@
 | N-07 | Gdy brak miejsc, dostać propozycję najbliższych wolnych terminów | U-07, cytat 4 | żądanie | Student |
 | N-08 | Widzieć zapisanych: po kliknięciu dnia w kalendarzu lista studentów i godzin | U-08 | rozwiązanie (kalendarz) | Wykładowca |
 | N-09 | Brak przypomnień przed konsultacją | U-09 | żądanie (ograniczenie) | Student |
+
+
+
+
