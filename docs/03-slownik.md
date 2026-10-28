@@ -272,3 +272,4 @@
 - **Przykład:** konsultacje przeniesione z sali 12 do sali 20
 - **Powiązane:** Termin konsultacji, Powiadomienie
 - **Źródło:** wywiad-1, cytat 2, U-05
+- 
