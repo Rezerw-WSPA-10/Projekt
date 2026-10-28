@@ -11,10 +11,12 @@ Zespół
 | Vitalii Panko | analiza wymagań, procesy, UI/UX, dokumentacja | @Vitalii1012P |
 
 Dokumentacja
-[Karta projektu](docs/01-karta-projektu.md)
-[Słownik](docs/02-slownik.md)
-[Wymagania](docs/03-wymagania.md)
-[Decyzje projektowe (ADR)](docs/adr/)
+- [Karta projektu](docs/01-karta-projektu.md)
+- [Słownik](docs/02-slownik.md)
+- [Wymagania](docs/03-wymagania.md)
+- [Diagram kontekstu](docs/06-architektura/kontekst.md)
+- [Notatka z wywiadu](docs/spotkania/wywiad-1.md)
+- [Decyzje projektowe (ADR)](docs/adr/)
 
 Narzędzia
 Zob. [ADR-001](docs/adr/ADR-001-narzedzia.md).
