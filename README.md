@@ -10,6 +10,16 @@ Zespół
 | Vladyslav Liudvichuk | koordynacja projektu, architektura, baza danych | @Winiffo |
 | Vitalii Panko | analiza wymagań, procesy, UI/UX, dokumentacja | @Vitalii1012P |
 
+
+## Umowa zespołu
+
+- Nikt nie zapisuje bezpośrednio do `main`. Zmiany przez gałąź i pull request.
+- Każdy PR ma co najmniej 1 zatwierdzenie drugiej osoby.
+- Nazwy gałęzi: `obszar/krotki-opis`, małe litery, bez polskich znaków.
+- Każde zadanie to Issue z jednym właścicielem. Zamykamy przez `Closes #n`.
+
+
+
 Dokumentacja
 - [Karta projektu](docs/01-karta-projektu.md)
 - [Słownik](docs/02-slownik.md)
@@ -17,9 +27,10 @@ Dokumentacja
 - [Diagram kontekstu](docs/06-architektura/kontekst.md)
 - [Notatka z wywiadu](docs/spotkania/wywiad-1.md)
 - [Decyzje projektowe (ADR)](docs/adr/)
+- [Macierz sledzenia](docs/macierz-sledzenia.md)
 
 Narzędzia
 Zob. [ADR-001](docs/adr/ADR-001-narzedzia.md).
 
 Status
-Wersja dokumentacji: 0.3
+Wersja dokumentacji: 0.4
