@@ -1,27 +1,36 @@
 # Macierz śledzenia
 
-**Wersja 0.1** · Jeden wiersz = jedno wymaganie. Pusta komórka lub „—” oznacza pytanie do uzupełnienia.
+**Wersja 0.2** · Jeden wiersz = jedno wymaganie. Pusta komórka lub „—” oznacza pytanie do uzupełnienia.
 
-| Potrzeba | Wymaganie | Historyjka | Priorytet |
-|---|---|---|---|
-| N-01 | FR-01 Lista terminów wykładowcy | — | Must |
-| N-01 | FR-11 Definiowanie podziału godzin | — | Must |
-| N-01 | FR-13 Wyszukiwanie wykładowcy | — | Could |
-| N-02 | FR-02 Szczegóły terminu | — | Should |
-| N-03 | FR-03 Zapis na konsultacje | US-01 | Must |
-| N-03 | BR-04 Dane wymagane przy zapisie | US-01 | Must |
-| N-04 | FR-04 Odrzucenie drugiego zapisu | US-01 | Must |
-| N-04 | BR-01 Jeden zapis u jednego wykładowcy | US-01 | Must |
-| N-05 | FR-05 Potwierdzenie zapisu | US-01 | Must |
-| N-05 | FR-06 Powiadomienie o zmianie sali | — | Should |
-| N-05 | FR-12 Zmiana sali przez wykładowcę | — | Should |
-| N-05 | BR-05 Obowiązek powiadomienia o zmianie sali | — | Should |
-| N-06 | FR-07 Rezygnacja jednym kliknięciem | US-02 | Must |
-| N-06 | BR-03 Rezygnacja w dowolnym momencie | US-02 | Must |
-| N-07 | FR-08 Blokada zapisu bez miejsc | US-01 | Must |
-| N-07 | FR-09 Propozycja najbliższych terminów | US-01 | Should |
-| N-07 | BR-02 Brak miejsc blokuje zapis | US-01 | Must |
-| N-08 | FR-10 Kalendarz z listą zapisanych | US-03 | Must |
-| N-09 | BR-06 Brak listy rezerwowej | — | Won't |
-| karta projektu | FR-14 Zarządzanie kontami | — | Should |
+| Potrzeba | Wymaganie | Historyjka | Priorytet | Proces |
+|---|---|---|---|---|
+| N-01 | FR-01 Lista terminów wykładowcy | — | Must | P-01.3 |
+| N-01 | FR-11 Definiowanie podziału godzin | US-04 | Must | P-02.3, P-02.4 |
+| N-01 | FR-13 Wyszukiwanie wykładowcy | — | Could | P-01.2 |
+| N-02 | FR-02 Szczegóły terminu | — | Should | P-01.3 |
+| N-03 | FR-03 Zapis na konsultacje | US-01 | Must | P-01.4, P-01.7 |
+| N-03 | BR-04 Dane wymagane przy zapisie | US-01 | Must | P-01.4, P-01.5 |
+| N-04 | FR-04 Odrzucenie drugiego zapisu | US-01 | Must | P-01.5 |
+| N-04 | BR-01 Jeden zapis u jednego wykładowcy | US-01 | Must | P-01.5 |
+| N-05 | FR-05 Potwierdzenie zapisu | US-01 | Must | P-01.8 |
+| N-05 | FR-06 Powiadomienie o zmianie sali | — | Should | P-02.7 |
+| N-05 | FR-12 Zmiana sali przez wykładowcę | — | Should | P-02.6 |
+| N-05 | BR-05 Obowiązek powiadomienia o zmianie sali | — | Should | P-02.7 |
+| N-06 | FR-07 Rezygnacja jednym kliknięciem | US-02 | Must | P-01.9, P-01.10 |
+| N-06 | BR-03 Rezygnacja w dowolnym momencie | US-02 | Must | P-01.9 |
+| N-07 | FR-08 Blokada zapisu bez miejsc | US-01 | Must | P-01.5 |
+| N-07 | FR-09 Propozycja najbliższych terminów | US-01 | Should | P-01.6 |
+| N-07 | BR-02 Brak miejsc blokuje zapis | US-01 | Must | P-01.5 |
+| N-08 | FR-10 Kalendarz z listą zapisanych | US-03 | Must | P-02.5 |
+| N-09 | BR-06 Brak listy rezerwowej | — | Won't | — (brak listy rezerwowej; zamiast niej P-01.6) |
+| karta projektu | FR-14 Zarządzanie kontami | — | Should | — (funkcja administracyjna; brak procesu „zarządzanie kontami” — do decyzji) |
+| karta projektu | FR-15 Logowanie | US-05 | Must | P-01.1, P-02.1 |
+| karta projektu | FR-16 Odwołanie terminu przez wykładowcę | — | Should | P-02.8 |
+| N-07 | FR-17 Limit miejsc na termin | US-04 | Must | P-02.3 |
+| karta projektu | FR-18 Powiadomienie o odwołaniu terminu | — | Should | P-02.9 |
+| — (walkthrough) | BR-07 Terminy wykładowcy się nie nakładają | US-04 | Must | P-02.4 |
+| karta projektu | BR-08 Odwołanie anuluje zapisy i wymaga powiadomienia | — | Should | P-02.9 |
 
+Kolumna „Proces” (od wersji 0.2): krok procesu TO-BE z `docs/04-procesy/`, np. `P-01.9` = proces P-01, krok 9. „—” = wymaganie bez kroku procesu (wyjaśnienie w nawiasie).
+
+Łańcuch wzorcowy: **FR-07 → US-02 → P-01.9 / P-01.10** → (zaj. 7) przypadek użycia → … → test.
