@@ -40,10 +40,6 @@
 | FR-12 | System umożliwia wykładowcy zmianę sali konsultacji. | N-05 | Should | założenie, Q-04 |
 | FR-13 | System umożliwia studentowi wyszukanie wykładowcy po nazwisku. | N-01 | Could | założenie |
 | FR-14 | System umożliwia administratorowi zakładanie i blokowanie kont użytkowników. | karta projektu | Should | założenie |
-| FR-15 | System umożliwia studentowi i wykładowcy zalogowanie się na własne konto. | karta projektu (IN 1) | Must | walkthrough P-01.1, P-02.1; Q-07 |
-| FR-16 | System umożliwia wykładowcy odwołanie terminu konsultacji. | karta projektu (IN 5) | Should | walkthrough P-02.8; BR-08, Q-03 |
-| FR-17 | System umożliwia wykładowcy ustalenie limitu miejsc na termin konsultacji. | N-07 | Must | walkthrough P-02.3; BR-02, Q-02 |
-| FR-18 | System wysyła studentowi powiadomienie o odwołaniu terminu, na który był zapisany. | karta projektu (IN 7) | Should | walkthrough P-02.9; BR-08 |
 | FR-15 | System informuje studenta o odrzuceniu zapisu i podaje powód (brak miejsc, drugi zapis u wykładowcy, brak danych). | N-04, N-07 | Must | P-01.6, BR-01, BR-02, BR-04 |
 | FR-16 | System zwalnia miejsce na terminie po rezygnacji studenta. | N-06 | Should | P-03.3, BR-03 |
 ---
