@@ -45,7 +45,7 @@
 | FR-17 | System umożliwia wykładowcy ustalenie limitu miejsc na termin konsultacji. | N-07 | Must | walkthrough P-02.3; BR-02, Q-02 |
 | FR-18 | System wysyła studentowi powiadomienie o odwołaniu terminu, na który był zapisany. | karta projektu (IN 7) | Should | walkthrough P-02.9; BR-08 |
 | FR-15 | System informuje studenta o odrzuceniu zapisu i podaje powód (brak miejsc, drugi zapis u wykładowcy, brak danych). | N-04, N-07 | Must | P-01.6, BR-01, BR-02, BR-04 |
-| FR-16 | System zwalnia miejsce na terminie po rezygnacji studenta. | N-06 | Must | P-03.3, BR-03 |
+| FR-16 | System zwalnia miejsce na terminie po rezygnacji studenta. | N-06 | Should | P-03.3, BR-03 |
 ---
 
 ## Wymagania niefunkcjonalne (NFR)
@@ -181,8 +181,8 @@ Powiązane: FR-15, Q-07
 
 | Priorytet | FR |
 |---|---|
-| Must (10 z 18 = 56%) | FR-01, FR-03, FR-04, FR-05, FR-07, FR-08, FR-10, FR-11, FR-15, FR-17 |
-| Should | FR-02, FR-06, FR-09, FR-12, FR-14, FR-16, FR-18 |
+| Must (9 z 16 = 56%) | FR-01, FR-03, FR-04, FR-05, FR-07, FR-08, FR-10, FR-11, FR-15 |
+| Should | FR-02, FR-06, FR-09, FR-12, FR-14, FR-16 |
 | Could | FR-13 |
 | Won't (now) | przypomnienia przed konsultacją (U-09), lista rezerwowa (BR-06) |
 
@@ -202,5 +202,5 @@ Powiązane: FR-15, Q-07
 | Q-08 | Czy odwołując termin, wykładowca musi podać przyczynę? (P-02.8) | do zgłoszenia |
 | Q-09 | Do kiedy przed konsultacją można się zapisać? (P-01.5) | do zgłoszenia |
 | Q-10 | Co, gdy potwierdzenie e-mail nie dotrze do studenta? (P-01.8) | do zgłoszenia |
-| Q-08 | Co się dzieje, gdy serwer poczty nie przyjmie powiadomienia? | do zgłoszenia |
-| Q-09 | Czy można zapisać się na konsultację, która już się rozpoczęła? | do zgłoszenia |
+| Q-08 | Co się dzieje, gdy serwer poczty nie przyjmie powiadomienia? | #49 |
+| Q-09 | Czy można zapisać się na konsultację, która już się rozpoczęła? | #50 |
