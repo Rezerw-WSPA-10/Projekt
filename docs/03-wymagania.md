@@ -40,10 +40,6 @@
 | FR-12 | System umożliwia wykładowcy zmianę sali konsultacji. | N-05 | Should | założenie, Q-04 |
 | FR-13 | System umożliwia studentowi wyszukanie wykładowcy po nazwisku. | N-01 | Could | założenie |
 | FR-14 | System umożliwia administratorowi zakładanie i blokowanie kont użytkowników. | karta projektu | Should | założenie |
-| FR-15 | System umożliwia studentowi i wykładowcy zalogowanie się na własne konto. | karta projektu (IN 1) | Must | walkthrough P-01.1, P-02.1; Q-07 |
-| FR-16 | System umożliwia wykładowcy odwołanie terminu konsultacji. | karta projektu (IN 5) | Should | walkthrough P-02.8; BR-08, Q-03 |
-| FR-17 | System umożliwia wykładowcy ustalenie limitu miejsc na termin konsultacji. | N-07 | Must | walkthrough P-02.3; BR-02, Q-02 |
-| FR-18 | System wysyła studentowi powiadomienie o odwołaniu terminu, na który był zapisany. | karta projektu (IN 7) | Should | walkthrough P-02.9; BR-08 |
 | FR-15 | System informuje studenta o odrzuceniu zapisu i podaje powód (brak miejsc, drugi zapis u wykładowcy, brak danych). | N-04, N-07 | Must | P-01.6, BR-01, BR-02, BR-04 |
 | FR-16 | System zwalnia miejsce na terminie po rezygnacji studenta. | N-06 | Should | P-03.3, BR-03 |
 ---
@@ -74,8 +70,6 @@ Wartości oznaczone „propozycja” są naszą propozycją do potwierdzenia z k
 | BR-04 | Zapis wymaga podania imienia, nazwiska, kierunku, godziny i numeru indeksu. | U-03 |
 | BR-05 | O zmianie sali student zapisany na termin musi zostać powiadomiony. | U-05 |
 | BR-06 | Lista rezerwowa nie jest stosowana. | U-07 |
-| BR-07 | Terminy konsultacji jednego wykładowcy nie mogą nakładać się czasowo. | założenie (walkthrough P-02.4) |
-| BR-08 | Odwołanie terminu przez wykładowcę anuluje wszystkie zapisy na ten termin, a zapisani studenci muszą zostać o tym powiadomieni. | karta projektu (założenia), Q-03 |
 | BR-07 | Zapis na termin, który już się rozpoczął, jest niemożliwy. | założenie, Q-09 |
 ---
 
@@ -199,8 +193,5 @@ Powiązane: FR-15, Q-07
 | Q-05 | Kto i jak wprowadza podział godzin do systemu? | do zgłoszenia |
 | Q-06 | Czy można zrezygnować z konsultacji, która już się rozpoczęła? | do zgłoszenia |
 | Q-07 | Jak student loguje się do systemu? | do zgłoszenia |
-| Q-08 | Czy odwołując termin, wykładowca musi podać przyczynę? (P-02.8) | do zgłoszenia |
-| Q-09 | Do kiedy przed konsultacją można się zapisać? (P-01.5) | do zgłoszenia |
-| Q-10 | Co, gdy potwierdzenie e-mail nie dotrze do studenta? (P-01.8) | do zgłoszenia |
 | Q-08 | Co się dzieje, gdy serwer poczty nie przyjmie powiadomienia? | #49 |
 | Q-09 | Czy można zapisać się na konsultację, która już się rozpoczęła? | #50 |
