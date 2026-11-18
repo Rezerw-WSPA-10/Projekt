@@ -1,6 +1,6 @@
 # Wymagania
 
-**Wersja 0.1** · System Rezerw+WSPA
+**Wersja 0.2** · System Rezerw+WSPA (0.2: uzupełnienia z walkthrough procesów P-01, P-02 — zob. `docs/04-procesy/`)
 
 Źródła: potrzeby N-xx, ustalenia U-xx i cytaty z `docs/spotkania/wywiad-1.md`. Pole „Źródło: założenie” oznacza, że klient tego nie potwierdził (patrz „Pytania otwarte”).
 
@@ -40,6 +40,10 @@
 | FR-12 | System umożliwia wykładowcy zmianę sali konsultacji. | N-05 | Should | założenie, Q-04 |
 | FR-13 | System umożliwia studentowi wyszukanie wykładowcy po nazwisku. | N-01 | Could | założenie |
 | FR-14 | System umożliwia administratorowi zakładanie i blokowanie kont użytkowników. | karta projektu | Should | założenie |
+| FR-15 | System umożliwia studentowi i wykładowcy zalogowanie się na własne konto. | karta projektu (IN 1) | Must | walkthrough P-01.1, P-02.1; Q-07 |
+| FR-16 | System umożliwia wykładowcy odwołanie terminu konsultacji. | karta projektu (IN 5) | Should | walkthrough P-02.8; BR-08, Q-03 |
+| FR-17 | System umożliwia wykładowcy ustalenie limitu miejsc na termin konsultacji. | N-07 | Must | walkthrough P-02.3; BR-02, Q-02 |
+| FR-18 | System wysyła studentowi powiadomienie o odwołaniu terminu, na który był zapisany. | karta projektu (IN 7) | Should | walkthrough P-02.9; BR-08 |
 
 ---
 
@@ -69,6 +73,8 @@ Wartości oznaczone „propozycja” są naszą propozycją do potwierdzenia z k
 | BR-04 | Zapis wymaga podania imienia, nazwiska, kierunku, godziny i numeru indeksu. | U-03 |
 | BR-05 | O zmianie sali student zapisany na termin musi zostać powiadomiony. | U-05 |
 | BR-06 | Lista rezerwowa nie jest stosowana. | U-07 |
+| BR-07 | Terminy konsultacji jednego wykładowcy nie mogą nakładać się czasowo. | założenie (walkthrough P-02.4) |
+| BR-08 | Odwołanie terminu przez wykładowcę anuluje wszystkie zapisy na ten termin, a zapisani studenci muszą zostać o tym powiadomieni. | karta projektu (założenia), Q-03 |
 
 ---
 
@@ -136,14 +142,46 @@ Powiązane: N-08, FR-10, NFR-04
   - **When** próbuję otworzyć listę jego terminu
   - **Then** system odmawia dostępu (NFR-04)
 
+### US-04: Udostępnienie terminów konsultacji (Must)
+
+**Jako** wykładowca **chcę** zdefiniować godziny, salę i limit miejsc konsultacji, **aby** studenci mogli zapisywać się bez wymiany e-maili.
+
+Powiązane: N-01, N-07, FR-11, FR-17, BR-07
+
+- **Scenariusz 1: nowe terminy**
+  - **Given** nie mam zdefiniowanych terminów na przyszły tydzień
+  - **When** dodaję konsultacje we wtorek 10:00–12:00 w sali 105 z limitem 6 miejsc i zatwierdzam
+  - **Then** termin jest widoczny dla studentów z 6 wolnymi miejscami
+
+- **Scenariusz 2: nakładające się terminy (BR-07)**
+  - **Given** mam termin we wtorek 10:00–12:00
+  - **When** dodaję kolejny termin we wtorek 11:00–13:00
+  - **Then** system odrzuca termin z informacją o nakładaniu się, a istniejący termin pozostaje bez zmian
+
+### US-05: Logowanie (Must)
+
+**Jako** student **chcę** zalogować się na swoje konto, **aby** zapisywać się na konsultacje i widzieć swoje zapisy.
+
+Powiązane: FR-15, Q-07
+
+- **Scenariusz 1: poprawne logowanie**
+  - **Given** mam konto studenta
+  - **When** podaję poprawne dane logowania
+  - **Then** widzę listę wykładowców i swoje zapisy
+
+- **Scenariusz 2: błędne dane**
+  - **Given** mam konto studenta
+  - **When** podaję błędne hasło
+  - **Then** system odmawia logowania z komunikatem i nie pokazuje żadnych danych
+
 ---
 
 ## Podsumowanie MoSCoW
 
 | Priorytet | FR |
 |---|---|
-| Must (8 z 14 = 57%) | FR-01, FR-03, FR-04, FR-05, FR-07, FR-08, FR-10, FR-11 |
-| Should | FR-02, FR-06, FR-09, FR-12, FR-14 |
+| Must (10 z 18 = 56%) | FR-01, FR-03, FR-04, FR-05, FR-07, FR-08, FR-10, FR-11, FR-15, FR-17 |
+| Should | FR-02, FR-06, FR-09, FR-12, FR-14, FR-16, FR-18 |
 | Could | FR-13 |
 | Won't (now) | przypomnienia przed konsultacją (U-09), lista rezerwowa (BR-06) |
 
@@ -160,3 +198,6 @@ Powiązane: N-08, FR-10, NFR-04
 | Q-05 | Kto i jak wprowadza podział godzin do systemu? | do zgłoszenia |
 | Q-06 | Czy można zrezygnować z konsultacji, która już się rozpoczęła? | do zgłoszenia |
 | Q-07 | Jak student loguje się do systemu? | do zgłoszenia |
+| Q-08 | Czy odwołując termin, wykładowca musi podać przyczynę? (P-02.8) | do zgłoszenia |
+| Q-09 | Do kiedy przed konsultacją można się zapisać? (P-01.5) | do zgłoszenia |
+| Q-10 | Co, gdy potwierdzenie e-mail nie dotrze do studenta? (P-01.8) | do zgłoszenia |
