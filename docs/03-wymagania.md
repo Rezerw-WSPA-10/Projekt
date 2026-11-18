@@ -70,8 +70,6 @@ Wartości oznaczone „propozycja” są naszą propozycją do potwierdzenia z k
 | BR-04 | Zapis wymaga podania imienia, nazwiska, kierunku, godziny i numeru indeksu. | U-03 |
 | BR-05 | O zmianie sali student zapisany na termin musi zostać powiadomiony. | U-05 |
 | BR-06 | Lista rezerwowa nie jest stosowana. | U-07 |
-| BR-07 | Terminy konsultacji jednego wykładowcy nie mogą nakładać się czasowo. | założenie (walkthrough P-02.4) |
-| BR-08 | Odwołanie terminu przez wykładowcę anuluje wszystkie zapisy na ten termin, a zapisani studenci muszą zostać o tym powiadomieni. | karta projektu (założenia), Q-03 |
 | BR-07 | Zapis na termin, który już się rozpoczął, jest niemożliwy. | założenie, Q-09 |
 ---
 
@@ -195,8 +193,5 @@ Powiązane: FR-15, Q-07
 | Q-05 | Kto i jak wprowadza podział godzin do systemu? | do zgłoszenia |
 | Q-06 | Czy można zrezygnować z konsultacji, która już się rozpoczęła? | do zgłoszenia |
 | Q-07 | Jak student loguje się do systemu? | do zgłoszenia |
-| Q-08 | Czy odwołując termin, wykładowca musi podać przyczynę? (P-02.8) | do zgłoszenia |
-| Q-09 | Do kiedy przed konsultacją można się zapisać? (P-01.5) | do zgłoszenia |
-| Q-10 | Co, gdy potwierdzenie e-mail nie dotrze do studenta? (P-01.8) | do zgłoszenia |
 | Q-08 | Co się dzieje, gdy serwer poczty nie przyjmie powiadomienia? | #49 |
 | Q-09 | Czy można zapisać się na konsultację, która już się rozpoczęła? | #50 |
