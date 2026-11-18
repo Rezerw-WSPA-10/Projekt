@@ -20,11 +20,6 @@ Student potrzebuje konsultacji.
 - konsultacja nieodbyta (wykładowca odwołał bez informacji),
 - student odchodzi bez konsultacji (zabrakło czasu).
 
-## Diagram
-
-![P-00 Umawianie konsultacji (AS-IS)](P-00-konsultacje-as-is.svg)
-
-Źródło: [P-00-konsultacje-as-is.bpmn](P-00-konsultacje-as-is.bpmn) (bpmn.io). Czerwone zadania = punkty bólu.
 
 ## Kroki
 
