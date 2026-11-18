@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" id="Definitions_P03_Rezygnacja" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Rezerw+WSPA bpmngen" exporterVersion="1.0">
+  <bpmn:collaboration id="Collab_P03_Rezygnacja">
+    <bpmn:participant id="Pool_P03_Rezygnacja" name="Uczelnia" processRef="P03_Rezygnacja" />
+  </bpmn:collaboration>
+  <bpmn:process id="P03_Rezygnacja" name="P-03 Rezygnacja studenta z zapisu (TO-BE)" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_P03_Rezygnacja">
+      <bpmn:lane id="Lane_St" name="Student">
+        <bpmn:flowNodeRef>S0</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T2</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_Sys" name="System Rezerw+WSPA">
+        <bpmn:flowNodeRef>T3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>E1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="S0" name="Student nie może przyjść">
+    </bpmn:startEvent>
+    <bpmn:userTask id="T1" name="P-03.1 Zaloguj się">
+    </bpmn:userTask>
+    <bpmn:userTask id="T2" name="P-03.2 Zrezygnuj z zapisu">
+    </bpmn:userTask>
+    <bpmn:serviceTask id="T3" name="P-03.3 Usuń zapis i zwolnij miejsce">
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="E1" name="Zapis anulowany, miejsce wolne">
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="S0" targetRef="T1" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="T1" targetRef="T2" />
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="T2" targetRef="T3" />
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="T3" targetRef="E1" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_P03_Rezygnacja">
+    <bpmndi:BPMNPlane id="Plane_P03_Rezygnacja" bpmnElement="Collab_P03_Rezygnacja">
+      <bpmndi:BPMNShape id="Pool_P03_Rezygnacja_di" bpmnElement="Pool_P03_Rezygnacja" isHorizontal="true">
+        <dc:Bounds x="0" y="20" width="925" height="270" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_St_di" bpmnElement="Lane_St" isHorizontal="true">
+        <dc:Bounds x="30" y="20" width="895" height="135" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Sys_di" bpmnElement="Lane_Sys" isHorizontal="true">
+        <dc:Bounds x="30" y="155" width="895" height="135" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S0_di" bpmnElement="S0">
+        <dc:Bounds x="114" y="70" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="78" y="110" width="110" height="40" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T1_di" bpmnElement="T1">
+        <dc:Bounds x="238" y="48" width="120" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T2_di" bpmnElement="T2">
+        <dc:Bounds x="402" y="48" width="120" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_di" bpmnElement="T3">
+        <dc:Bounds x="568" y="182" width="120" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="E1_di" bpmnElement="E1">
+        <dc:Bounds x="774" y="204" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="738" y="244" width="110" height="40" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1">
+        <di:waypoint x="150" y="88" />
+        <di:waypoint x="238" y="88" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2">
+        <di:waypoint x="358" y="88" />
+        <di:waypoint x="402" y="88" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3">
+        <di:waypoint x="522" y="88" />
+        <di:waypoint x="545" y="88" />
+        <di:waypoint x="545" y="222" />
+        <di:waypoint x="568" y="222" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4">
+        <di:waypoint x="688" y="222" />
+        <di:waypoint x="774" y="222" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

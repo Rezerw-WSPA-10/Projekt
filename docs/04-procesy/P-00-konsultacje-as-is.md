@@ -1,61 +1,35 @@
-# P-00: Umawianie konsultacji (AS-IS)
+# P-00 AS-IS: Umawianie konsultacji
 
-**Wersja:** 0.1 · **Powiązane:** P-01, P-02 (TO-BE)
+Diagram: `P-00-konsultacje-as-is.svg`
 
-## Cel procesu
+![Diagram P-00](P-00-konsultacje-as-is.svg)
 
-Student spotyka się z wykładowcą w sprawie przedmiotu, pracy lub zaliczenia.
+## Kroki i problemy
 
-## Wyzwalacz (zdarzenie początkowe)
+| Krok | Tor | Typ | Problem |
+|---|---|---|---|
+| P-00.1 Sprawdź godziny na drzwiach sali | Student | zadanie ręczne | termin znany tylko z kartki na drzwiach (N-01) |
+| P-00.2 Wyślij e-mail z prośbą o termin | Student | zadanie ręczne | wiele wiadomości, chaos |
+| P-00.3 Odpowiedz na e-mail z terminem | Wykładowca | zadanie ręczne | odpowiedź po kilku dniach |
+| P-00.4 Znajdź nową salę | Student | zadanie ręczne | zmiana sali tylko na kartce (N-05) |
+| P-00.5 Przyjdź w godzinach konsultacji | Student | zadanie ręczne | — |
+| P-00.6 Czekaj w kolejce pod drzwiami | Student | zadanie ręczne | brak zapisu i limitu miejsc (N-03, N-07) |
+| P-00.7 Przyjmuj studentów po kolei | Wykładowca | zadanie ręczne | wykładowca nie wie, kto przyjdzie (N-08) |
+| P-00.8 Przeprowadź konsultację | Wykładowca | zadanie ręczne | — |
 
-Student potrzebuje konsultacji.
+## Punkty bólu
 
-## Uczestnicy (tory)
+| ID | Problem | Gdzie | Odpowiedź w TO-BE |
+|---|---|---|---|
+| PB-01 | Termin znany tylko z drzwi | P-00.1 | P-01.1 (FR-01, FR-02, FR-13) |
+| PB-02 | E-maile i czekanie na odpowiedź | P-00.2, P-00.3 | P-01.2–P-01.5 (FR-03, FR-05) |
+| PB-03 | Zmiana sali tylko na kartce | P-00.4 | P-02.6, P-02.7 (FR-12, FR-06, BR-05) |
+| PB-04 | Odwołanie bez informacji | bramka „Wykładowca jest na miejscu?” | P-02.8, P-02.9 (FR-17, FR-19, BR-08) |
+| PB-05 | Kolejka, brak limitu miejsc | P-00.6 | P-01.3, P-01.7 (FR-08, FR-18, FR-09, BR-02) |
+| PB-06 | Wykładowca nie zna listy | P-00.7 | P-02.5 (FR-10) |
 
-- Student, Wykładowca. Brak systemu — narzędzia: kartka na drzwiach sali, e-mail.
+## Koniec procesu
 
-## Wyniki (zdarzenia końcowe)
-
-- konsultacja odbyta,
-- konsultacja nieodbyta (wykładowca odwołał bez informacji),
-- student odchodzi bez konsultacji (zabrakło czasu).
-
-## Diagram
-
-![P-00 Umawianie konsultacji (AS-IS)](P-00-konsultacje-as-is.svg)
-
-Źródło: [P-00-konsultacje-as-is.bpmn](P-00-konsultacje-as-is.bpmn) (bpmn.io). Czerwone zadania = punkty bólu.
-
-## Kroki
-
-| Krok | Kto | Opis | Dokument / narzędzie | Problem (punkt bólu) |
-|---|---|---|---|---|
-| P-00.1 | Student | sprawdza godziny konsultacji na drzwiach sali | kartka na drzwiach | trzeba przyjść na uczelnię, żeby poznać termin (N-01) |
-| P-00.2 | Student | gdy nie może przyjść osobiście — pisze e-mail z prośbą o termin | e-mail | wiele wiadomości, chaos (karta projektu, p. 2) |
-| P-00.3 | Wykładowca | odpowiada na e-mail z propozycją terminu | e-mail | odpowiedź po kilku dniach; brak jednego harmonogramu |
-| bramka | Student | kartka o zmianie sali? | kartka na drzwiach | — |
-| P-00.4 | Student | szuka nowej sali | kartka na drzwiach | informacja o zmianie tylko na miejscu (N-05, cytat 2) |
-| P-00.5 | Student | przychodzi w godzinach konsultacji | — | — |
-| bramka | Student | wykładowca jest na miejscu? | — | brak powiadomienia o odwołaniu — student przychodzi na próżno |
-| P-00.6 | Student | czeka w kolejce pod drzwiami | — | brak zapisu i limitu miejsc — nie wiadomo, ile osób czeka (N-03, N-07) |
-| P-00.7 | Wykładowca | przyjmuje studentów po kolei | — | wykładowca nie wie wcześniej, kto przyjdzie (N-08) |
-| bramka | Wykładowca | starczyło czasu? | — | student odchodzi bez konsultacji |
-| P-00.8 | Wykładowca | przeprowadza konsultację | — | — |
-
-Poza procesem (czynność przygotowawcza): wykładowca wywiesza na drzwiach kartkę z podziałem godzin i ewentualnie kartkę o zmianie sali (wywiad-1, U-01, cytat 1–2).
-
-## Punkty bólu → odpowiedź w TO-BE
-
-| Krok AS-IS | Problem | Odpowiedź w TO-BE |
-|---|---|---|
-| P-00.1 | termin znany tylko z drzwi | P-01.2–P-01.3: lista terminów w systemie (FR-01, FR-02, FR-13) |
-| P-00.2, P-00.3 | e-maile i czekanie na odpowiedź | samoobsługowy zapis P-01.4–P-01.7 (FR-03) |
-| P-00.4 | zmiana sali tylko na kartce | P-02.6–P-02.7: zmiana sali + powiadomienie (FR-12, FR-06, BR-05) |
-| bramka „wykładowca na miejscu?” | brak informacji o odwołaniu | P-02.8–P-02.9: odwołanie + powiadomienie (FR-16, FR-18, BR-08) |
-| P-00.6 | kolejka, brak limitu | zapis na godzinę i limit miejsc (FR-08, FR-17, BR-02); propozycja innych terminów (FR-09) |
-| P-00.7 | wykładowca nie zna listy | kalendarz zapisanych P-02.5 (FR-10) |
-| bramka „starczyło czasu?” | student odchodzi bez konsultacji | zapis na konkretną godzinę (FR-03) — ograniczone, nie usunięte |
-
-## Otwarte pytania
-
-- Jak często wykładowcy odwołują konsultacje bez uprzedzenia? (do potwierdzenia z klientem)
+- „Konsultacja odbyta”
+- „Konsultacja nieodbyta (odwołana bez informacji)”
+- „Student odchodzi bez konsultacji”
