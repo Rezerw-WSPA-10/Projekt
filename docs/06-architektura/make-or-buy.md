@@ -18,6 +18,16 @@
 | FR-11, FR-12, FR-16, FR-17 Terminy, sala, limit, odwołanie (P-02.3–P-02.9) | — | **make** | rdzeń dziedziny, reguły BR-05, BR-07, BR-08 |
 | FR-14 Zarządzanie kontami | konta z katalogu uczelni (jeśli SSO) albo prosty panel administratora | do decyzji | zależy od decyzji przy FR-15 |
 
+# Make or buy: lista kandydatów
+
+| Funkcja | Kandydat | Wstępnie | Uwagi |
+|---|---|---|---|
+| FR-05, FR-06 Powiadomienia e-mail | serwer poczty uczelni | buy (integracja) | OG-02 |
+| Logowanie | konta uczelni / własne konta | do ustalenia | Q-07, klient jeszcze nie odpowiedział |
+| FR-10 Kalendarz zapisanych | biblioteka kalendarza open source | buy | do sprawdzenia |
+| FR-03, FR-04, FR-08 Zapis na termin | — | make | rdzeń systemu |
+| FR-11, FR-12 Zarządzanie terminami | — | make | |
+
 ## Pytania do wyjaśnienia przed zajęciami 6
 
 - Czy uczelnia udostępnia logowanie kontem uczelnianym dla aplikacji studenckich? (Q-07)
