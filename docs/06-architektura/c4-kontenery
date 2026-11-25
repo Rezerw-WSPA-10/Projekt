@@ -1,0 +1,37 @@
+# C4 poziom 2: kontenery
+
+Technologie oznaczone „propozycja” wymagają potwierdzenia przez zespół i prowadzącego.
+
+```mermaid
+flowchart LR
+    U(["Student / Wykładowca / Administrator<br/>[osoba]"])
+    subgraph RW["Rezerw+WSPA [system]"]
+        SPA["Aplikacja webowa (SPA)<br/>[TypeScript, propozycja]"]
+        API["Backend API<br/>[modularny monolit, REST/JSON, propozycja]"]
+        DB[("Baza danych<br/>[PostgreSQL, propozycja]")]
+    end
+    SMTP["Serwer poczty uczelni<br/>[system zewnętrzny]"]
+    U -->|"używa [HTTPS]"| SPA
+    SPA -->|"wywołuje API [HTTPS, JSON]"| API
+    API -->|"czyta i zapisuje [SQL]"| DB
+    API -->|"wysyła e-maile [SMTP]"| SMTP
+```
+
+## Opis kontenerów
+
+| Kontener | Technologia | Odpowiedzialność |
+|---|---|---|
+| Aplikacja webowa (SPA) | TypeScript (propozycja) | Interfejs: lista terminów, zapis, rezygnacja, kalendarz wykładowcy. |
+| Backend API | modularny monolit, REST/JSON (propozycja) | Reguły BR-01–BR-07, zapisy, konta, wysyłka powiadomień. |
+| Baza danych | PostgreSQL (propozycja) | Terminy, zapisy, konta, słowniki. |
+
+## Wpływ NFR na architekturę
+
+| NFR | Odpowiedź architektoniczna |
+|---|---|
+| NFR-01 (rezygnacja jednym kliknięciem) | jedno wywołanie API usuwa zapis i zwalnia miejsce, bez potwierdzeń pośrednich |
+| NFR-03 (lista terminów < 2 s) | indeksy na terminie i wykładowcy, dane w jednej bazie |
+| NFR-04 (lista tylko dla wykładowcy terminu) | autoryzacja w backendzie, nie w SPA |
+| NFR-05 (tylko dane z U-03) | model danych ogranicza się do czterech atrybutów studenta |
+| NFR-06 (dostępność 99%) | kolejka powiadomień z ponowieniem, gdy serwer poczty jest niedostępny |
+| NFR-07 (360 px) | responsywna SPA, bez aplikacji natywnej |
