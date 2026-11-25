@@ -18,15 +18,18 @@
 | FR-11, FR-12, FR-16, FR-17 Terminy, sala, limit, odwołanie (P-02.3–P-02.9) | — | **make** | rdzeń dziedziny, reguły BR-05, BR-07, BR-08 |
 | FR-14 Zarządzanie kontami | konta z katalogu uczelni (jeśli SSO) albo prosty panel administratora | do decyzji | zależy od decyzji przy FR-15 |
 
-# Make or buy: lista kandydatów
+# Make or buy
 
-| Funkcja | Kandydat | Wstępnie | Uwagi |
-|---|---|---|---|
-| FR-05, FR-06 Powiadomienia e-mail | serwer poczty uczelni | buy (integracja) | OG-02 |
-| Logowanie | konta uczelni / własne konta | do ustalenia | Q-07, klient jeszcze nie odpowiedział |
-| FR-10 Kalendarz zapisanych | biblioteka kalendarza open source | buy | do sprawdzenia |
-| FR-03, FR-04, FR-08 Zapis na termin | — | make | rdzeń systemu |
-| FR-11, FR-12 Zarządzanie terminami | — | make | |
+Kryteria: dopasowanie, koszt, ryzyko, zależność od dostawcy, RODO, czas. Ceny i warunki nie są tu zgadywane: do sprawdzenia przy realizacji.
+
+| Obszar | Wymagania | Decyzja | Dopasowanie | Ryzyko / RODO / zależność |
+|---|---|---|---|---|
+| Cały system (gotowy SaaS do konsultacji) | FR-03, FR-04, FR-08, BR-01, BR-02 | **make** | gotowy produkt nie zna reguł z wywiadu (jeden zapis u wykładowcy, brak miejsc) | brak zależności od dostawcy; więcej pracy |
+| Powiadomienia e-mail | FR-05, FR-06, OG-02 | **use**: serwer poczty uczelni, szablony wiadomości **make** | spełnia wymagania w całości | zależność od poczty uczelni (R-04); adres e-mail jest daną osobową |
+| Uwierzytelnianie | FR-14, Q-07 | **make**: własne konta (zgodnie z kartą projektu) | spełnia wymagania; SSO odpada poza zakresem | przechowywanie haseł, ryzyko bezpieczeństwa (R-05); ADR-003 |
+| Kalendarz wykładowcy | FR-10 | **use**: biblioteka kalendarza open source | spełnia widok dnia z listą | zależność od biblioteki; brak danych osobowych w bibliotece |
+| Baza danych | wszystkie | **use**: PostgreSQL (propozycja) | spełnia w całości | open source, brak dostawcy |
+| Płatności, mapy, push | | nie dotyczy | | |
 
 ## Pytania do wyjaśnienia przed zajęciami 6
 
